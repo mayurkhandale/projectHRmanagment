@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+<head>
+    <style>
+        #width{
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 align="center" style="background: navajowhite">HR Operation Managment</h1>
+  <div class="" >
+          <nav class="navbar navbar-light bg-light" >
+              <a class="navbar-brand" href="{% url 'home' %}" id="width"><img src="{% static 'images/iconfinder_home_353416.png' %} " height="50" width="50">Home</a>
+              <a class="navbar-brand" href="{% url 'login' %}"id="width"><img src="{% static 'images/admin.jpg' %}" height="50" width="50">Admin</a>
+               <a class="navbar-brand" href="{% url 'managerlogin' %}"><img src="{% static 'images/manager-icon-png-23.jpg' %}" width="60" height="60">Manager</a>
+              <a class="navbar-brand" href="{% url 'aplicant_login' %}" id="width"><img src="{% static 'images/applicant.png' %}" width="60" height="60">Applicant</a>
+              <a class="navbar-brand" href="#" id="width"><img src="{% static 'images/interviewer.jpg' %}" height="50" width="50"> Interviewer</a>
+              <a class="navbar-brand" href="#" id="width"><img src="{% static 'images/hrlogo.webp' %}" width="50" height="50">HR Head</a>
+          </nav>
+          </div>
+{% block common %}
+
+{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: slategray" align="center"> Update New Recritment</h1>
+<form  method="post">
+    {% csrf_token %}
+<table align="center" border="2" >
+    <tr><td>Oportunity Code</td>
+        <td><input type="number" readonly required name="t1" value="{{ qs.opprtunity_code }}"></td>
+    </tr>
+    <tr>
+        <td>Qualification</td>
+        <td><input type="text" required name="t2" value="{{ qs.qualifucation}}"></td>
+    </tr>
+    <tr>
+        <td>Registration Start From</td>
+        <td><input  required name="t3" value="{{ qs.registratin_start_from }}"></td>
+    </tr>
+    <tr>
+        <td>Age Limit</td>
+        <td><input type="number" required name="t4" value="{{ qs.age_limit }}"></td>
+    </tr>
+    <tr>
+        <td>Last Day Apply</td>
+        <td><input  required name="t5" value="{{ qs.last_day_apply }}"></td>
+    </tr>
+    <tr>
+        <td>Department Id</td>
+        <td ><input type="number" name="t6" value="{{ qs.department_id }}"></td>
+    </tr>
+    <tr>
+        <td>NO Of Position</td>
+        <td><input type="number" name="t7" required value="{{ qs.no_of_position }}"></td>
+    </tr>
+    <tr>
+        <td>Discription</td>
+        <td><input type="text" required name="t8" value="{{ qs.description }}"></td>
+    </tr>
+    <tr>
+        <td>Responsibility</td>
+        <td><input type="text" name="t9" value="{{ qs.resposibility }}"></td>
+    </tr>
+    <tr>
+        <td>Contact Number</td>
+        <td><input type="number" required value="{{ qs.contact_no }}"></td>
+    </tr>
+    <tr><td align="center"><button type="submit" style="color: green">Update Detail</button></td>
+        <td align="center"><a href="{% url 'managerhome' %}"> Back</a></td>
+    </tr>
+    {% if messages %}
+        {% for x in messages %}
+
+        <tr><th>{{x  }}</th></tr>
+        {% endfor %}
+    {% endif %}
+
+</table>
+</form>
+
+</body>
+
+</html>

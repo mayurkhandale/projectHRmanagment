@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: salmon;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: slategray;
+  color: white;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="background: navajowhite">HR Operation Managment</h1>
+<h1 align="center" style="background-color: darkgrey">Recuirtment Schedule</h1>
+
+<div class="vertical-menu">
+  <a href="{% url 'new_req' %}" class="active">New Recuirtment Details</a>
+  <a href="{% url 'modify' %}">Modifying Recuirtment Details</a>
+  <a href="{% url 'delete_req' %}">Deleting Recuitment Details</a>
+  <a href="{% url 'managerlogin' %}">Back</a>
+
+</div>
+
+</body>
+</html>
+{% block schedule %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'admin/admincomman.html' %}
+{% block admincomman %}
+ <table align="center" border="2">
+     <tr bgcolor="#ffefd5"><th colspan="8">View Employee Detail</th></tr>
+  <tr>
+     <th>Employee Id</th>
+     <th>Employee Name</th>
+     <th>Disignation</th>
+      <th>Address</th>
+      <th>Contact No</th>
+      <th>Password</th>
+      <th>Email Id</th>
+  </tr>
+ {% for x in emp %}
+     <tr bgcolor="#dcdcdc">
+     <th>{{ x.empployee_id }}</th>
+     <th>{{ x.employee_name }}</th>
+     <th>{{ x.disignation }}</th>
+      <th>{{ x.address }}</th>
+      <th>{{ x.contact_no }}
+         <th>{{ x.password }}</th>
+      <th>{{ x.email }}</th>
+
+  </tr>
+
+ {% endfor %}
+
+ </table>
+{% endblock %}

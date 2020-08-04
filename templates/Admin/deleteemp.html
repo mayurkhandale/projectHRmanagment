@@ -1,0 +1,35 @@
+{% extends 'admin/admincomman.html' %}
+{% block admincomman %}
+    {% if data %}
+        <table align="center" border="1">
+        <tr bgcolor="#b0c4de"><th colspan="7">Delete Employee Details</th></tr>
+        <tr><td>Employee Id</td>
+            <td>Employee Name</td>
+            <td>Designation</td>
+            <td>Address</td>
+            <td>Contact No</td>
+            <td>Password</td>
+            <td>Email Id</td>
+        </tr>
+        {% for x in data %}
+            <form action="{% url 'deleteemp' %}" method="post">
+            {% csrf_token %}
+             <tr><td><input type="checkbox" name="del" value="{{ x.empployee_id }}" >{{ x.empployee_id }}</td>
+            <td>{{ x.employee_name }}</td>
+            <td>{{ x.disignation }}</td>
+                 <td>{{ x.address }}</td>
+            <td>{{ x.contact_no }}</td>
+            <td>{{ x.password }}</td>
+            <td>{{ x.email }}</td>
+
+            </tr>
+                {% endfor %}
+            <tr><th colspan=" 7" ><button type="submit" style="color: red">Delete</button></th></tr>
+            </form>
+
+        </table>
+        {% else %}
+        <div class="active"><p>Record is Deleted</p></div>
+
+    {% endif %}
+{% endblock %}

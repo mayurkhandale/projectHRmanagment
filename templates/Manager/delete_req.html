@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Recuitment form</title>
+
+</head>
+<body>
+<h1 align="center" style="color: salmon">Delete recruiter Details</h1>
+   {% if record %}
+       <form method="post">
+       {% csrf_token %}
+       <table align="center" border="1">
+       <tr>
+       <th>Opportunity Code</th>
+       <th>Qualification</th>
+       <th>Registration Start From</th>
+       <th>Age limit</th>
+       <th>Last Day Apply</th>
+       <th>Depatment Id</th>
+       <th>No of Position</th>
+       <th>Discription</th>
+       <th>Responsibility</th>
+       <th>Contact No</th>
+       </tr>
+       {% for x in record %}
+           <th><input type="checkbox" value="{{ x.opprtunity_code }}" id="color" name="delete">{{ x.opprtunity_code}}</th>
+       <th>{{ x.qualifucation }}</th>
+       <th>{{ x.registratin_start_from }}</th>
+       <th>{{ x.age_limit }}</th>
+       <th>{{ x.last_day_apply }}</th>
+       <th>{{ x.department_id }}</th>
+       <th>{{ x.no_of_position }}</th>
+       <th>{{ x.description }}</th>
+       <th>{{ x.resposibility }}</th>
+       <th>{{ x.contact_no }}</th>
+       </tr>
+
+       {% endfor %}
+       <tr><th style="color: red" colspan="5"><button type="submit">Delete</button></th>
+           <th colspan="5"><a href="{% url 'managerhome' %}">Back</a></th>
+           </tr>
+
+       {% else %}
+       <h3>Data is not Available</h3>
+   {% endif %}
+   </table>
+</form>
+</body>
+</html>

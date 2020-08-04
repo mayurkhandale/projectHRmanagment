@@ -1,0 +1,24 @@
+{% extends 'Admin/admincomman.html' %}
+{% block admincomman %}
+    <table align="center" border="2">
+    <tr><th bgcolor="#ff7f50" colspan="6">Update Employee Details</th></tr>
+    <tr>
+        <th>Employee Id</th>
+          <th>Employee Name</th>
+          <th>Disignation</th>
+          <th>Contact No</th>
+        <th>Password</th>
+          <th>Email Id</th>
+    </tr>
+    {% for x in update %}
+        <tr>
+            <th><a href="{% url 'update' x.empployee_id%}">{{ x.empployee_id}}</a></th>
+          <th>{{ x.employee_name }}</th>
+          <th>{{ x.disignation }}</th>
+          <th>{{ x.contact_no }}</th>
+          <th>{{ x.password }}</th>
+           <th>{{ x.email }}</th>
+       </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

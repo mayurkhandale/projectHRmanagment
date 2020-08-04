@@ -1,0 +1,43 @@
+{% extends 'comman.html' %}
+{% block common %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #map{
+            margin-top: 100px;
+
+        }
+        #footer{
+            text-align: center;
+            margin-top: 50px;
+            color: black;
+        }
+        #h1{
+            color: goldenrod;
+            text-align: center;
+            text-shadow: #111111;
+
+        }
+
+    </style>
+</head>
+<body>
+     {% for x in messages %}
+         <h1 style="color: red">{{ x }}</h1>
+     {% endfor %}
+     <h2 id="h1">Innominds Bright Your Future</h2>
+     <marquee direction="right" ><h2 id="h1">we Are Hiring Python Devloper</h2></marquee>
+<div style="text-align: center" id="map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.413197399197!2d78.44748449915282!3d17.43992648798843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c7acdb6af9%3A0xbc3b65dc476c888!2sShivBagh%2C%20Balkampet%2C%20Hyderabad%2C%20Telangana%20500016!5e0!3m2!1sen!2sin!4v1582953113106!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" ></iframe>
+</div>
+     <footer id="footer"><h3 style="color: green">@Copyright-2020 |HR Operation| All Rights Reseved</h3>
+                        <h3 style="color: green">Site Map| Return & Reshedule| Term Of Use| Privercy</h3>
+
+</footer>
+</body>
+</html>
+{% endblock %}

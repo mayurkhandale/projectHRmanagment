@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <h1 align="center" style="color: sandybrown">modify Recruitment Details</h1>
+     <form action="{% url 'modify' %}" method="post">
+         {% csrf_token %}
+     <table align="center" border="0">
+         <tr>
+             <td>Select Opportunity Code</td>
+             <td><input type="number" required name="t1"></td>
+
+         </tr>
+         <tr ><td align="center"><button type="submit">Get Details</button></td>
+             <td align="center"><a href="{% url 'managerhome' %}">Back</a></td>
+         </tr>
+
+
+     </table>
+          {% if messages %}
+              {% for x in messages %}
+                  <h1 style="color: red" align="center">{{ x }}</h1>
+              {% endfor %}
+         {% endif %}
+     </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "Admin/admincomman.html" %}
+{% block admincomman %}
+    <form method="post">
+    {% csrf_token %}
+        <h1 align="center" style="color: coral">Update Employee Details</h1>
+   <table align="center">
+       <tr>
+           <td>ID No</td>:
+           <td>{{ form.empployee_id }}</td>
+       </tr>
+        <tr>
+           <td>Name</td>
+           <td>{{ form.employee_name}}</td>
+       </tr>
+        <tr>
+           <td>Password</td>
+           <td>{{ form.password}}</td>
+       </tr>
+        <tr>
+           <td>Disignation</td>
+           <td>{{ form.disignation }}</td>
+       </tr>
+        <tr>
+           <td>Address</td>
+           <td>{{ form.address }}</td>
+       </tr>
+        <tr>
+           <td>Contact No</td>
+           <td>{{ form.contact_no}}</td>
+       </tr>
+        <tr>
+           <td>Email Id</td>
+           <td>{{ form.email }}</td>
+       </tr>
+        <tr ><td colspan="2" align="center" > <button type="submit" >Update</button ></td></tr>
+   </table>
+
+
+    </form>
+{% endblock %}

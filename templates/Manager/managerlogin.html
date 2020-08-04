@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+{% block common %}
+    <h1 align="center" aria-atomic="true"> Manager Login Form</h1>
+    <form action="{% url 'managerlogin' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="0" style="text-shadow: #111111">
+
+    <tr>
+        <td>User Name</td>
+        <td><input type="text" name="m1" required   ></td>
+    </tr>
+    <tr><td>Password</td>
+        <td><input type="password" name="m2" required  ></td>
+    </tr>
+    <tr><th colspan="2"><button type="submit" style="color:green;">Log-In</button> </th></tr>
+
+    </table>
+    </form>
+
+
+{% endblock %}

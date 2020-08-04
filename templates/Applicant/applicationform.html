@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for x in messages %}
+
+<h1 align="center" style="color: green">{{x }}</h1>
+{% endfor %}
+<table align="center">
+
+
+   <tr><th style="color:darkgrey;" >Application Form</th></tr>
+    <tr><td style="float: left">WELCOME{{ data.name }}</td></tr>
+    <tr>
+        <td>Name</td>
+        <td>{{ apform.name }}</td>
+    </tr>
+    <tr>
+        <td>Date Of Birth</td>
+        <td>{{ apform.date_of_birth }}</td>
+    </tr>
+    <tr>
+        <td>Email Id</td>
+        <td>{{ apform.emailid}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{ apform.gender }}</td>
+    </tr>
+    <tr>
+        <td>Mobaile No</td>
+        <td>{{ apform.phone_no}}</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>{{ apform.address }}</td>
+    </tr>
+    <tr>
+        <td>Qualification</td>
+        <td>{{ apform.qualification}}</td>
+    </tr>
+    <tr>
+        <td>Post</td>
+        <td>{{ apform.post}}</td>
+    </tr>
+    <tr>
+        <td>Percentage</td>
+        <td>{{ apform.percentage}}</td>
+    </tr>
+    <tr>
+        <td>Upload Resume</td>
+        <td>{{ apform.name }}</td>
+    </tr>
+    <tr>
+        <td><a>login</a></td>
+        <td><a>back</a></td>
+    </tr>
+</table>
+</body>
+</html>
